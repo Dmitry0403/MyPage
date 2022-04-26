@@ -1,0 +1,20 @@
+.wrapper {
+    max-width: 1280px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.containerChildren {
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 95%;
+    background: rgb(253, 252, 252);
+    height: calc(100vh - 100px);
+}
+
+.subContainerChildren {
+    height: 100%;
+    overflow: auto;
+}
