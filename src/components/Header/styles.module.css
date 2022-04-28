@@ -1,10 +1,13 @@
 .header {
+    background: rgb(51, 51, 51);
+    padding: 15px;
+    min-height: 70vh;
+}
+
+.menu {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    background: rgb(51, 51, 51);
-    padding: 15px;
-    min-height: 399px;
 }
 
 .menuLink {
@@ -19,6 +22,12 @@
 
 .menuIcon {
     display: none;
+}
+
+.select {
+    font-size: 17px;
+    padding: 5px;
+    border-radius: 4px;
 }
 
 @media screen and (min-width: 767px) {
