@@ -3,13 +3,26 @@ import React, { SetStateAction } from "react";
 export const language = {
     russian: {
         about: "О себе",
+        summary: "Резюме",
+        contact: "Контакты",
+        portfolio: "Портфолио",
+        skills: "Навыки",
         aboutContent:
-            "Более 20 лет успешной организации и управления бизнес-процессами в логистике. Умею находить эффективные решения.  Ставлю себе новую цель: используя развитые аналитические навыки, освоить профессию в IT и писать качественный код. Смогу эффективно общаться с заказчиками, выполняя работу ответственно и в указанные сроки.",
+            "Большой опыт в организации и управлении бизнес-процессами. Умею находить эффективные решения. Ответственно выполняю свою работу. На пути к достижению новой жизненной цели 2021 год прошел в активном обучении по специальности Front-end Developer на курсах TeachMeSkills.",
+        skillsContent: "Успешно изучены стеки технологий:",
+        englishContent: "Уровень английского – Intermediate.",
     },
     english: {
-        about: "About Me",
+        about: "About",
+        summary: "Summary",
+        contact: "Contact",
+        portfolio: "Portfolio",
+        skills: "Skills",
         aboutContent:
-            "More than 20 years of successful organization and management of business processes in logistics. I know how to find effective solutions.  I successfully master the profession of Front-End Developer. I'm open to your job offers. I will be able to communicate effectively with customers, doing the work responsibly and on time.",
+            "Extensive experience in organizing and managing business processes. I know how to find effective solutions. I do my job responsibly. On the way to achieving a new life goal, 2021 was spent for active learning as a Front-end Developer at TeachMeSkills courses.",
+
+        skillsContent: "Successfully studied technology stacks:",
+        englishContent: "English - Intermediate.",
     },
 };
 

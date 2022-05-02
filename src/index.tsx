@@ -1,5 +1,5 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import { createRoot } from "react-dom/client";
 import "./styles/styles.css";
 import { BrowserRouter } from "react-router-dom";
 import { App } from "./components/App";
@@ -15,4 +15,6 @@ const Main: React.FC = () => {
     );
 };
 
-ReactDOM.render(<Main />, document.getElementById("root"));
+const root = createRoot(document.getElementById("root")!);
+
+root.render(<Main />);

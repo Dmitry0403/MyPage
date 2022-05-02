@@ -41,7 +41,7 @@ export const Header: React.FC = () => {
                             }
                             onClick={handleCloseMenu}
                         >
-                            {el}
+                            {languageTheme[el as keyof typeof languageTheme]}
                         </NavLink>
                     ))}
                 </div>
