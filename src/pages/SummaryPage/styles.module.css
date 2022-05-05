@@ -1,0 +1,31 @@
+.title {
+    background-color: orange;
+    padding: 5px 25px;
+    font-size: 25px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.text {
+    padding: 10px 0 10px 0;
+}
+
+.certificate {
+    max-width: 30%;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.certificate img {
+    width: 100%;
+}
+
+/* .certificate:hover {
+    position: relative;
+    cursor: pointer;
+    transform: scale(3);
+  } */
+
+.review {
+    color: black;
+}

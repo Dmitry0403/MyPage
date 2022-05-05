@@ -19,25 +19,17 @@ export const AboutPage: React.FC = () => {
 
     const iconsLeft = [
         "ic_webpack",
-        "ic_redux",
+        "ic_typescript",
         "ic_reactrouter",
         "ic_react",
-        "ic_typescript",
+        "ic_redux",
         "ic_javascript",
         "ic_css3",
         "ic_html5",
-    ];
-
-    const iconsRight = [
-        "ic_bem",
-        "ic_npm",
-        "ic_antdesign",
-        "ic_prettier",
-        "ic_eslint",
-        "ic_cssmodules",
-        "ic_sass",
         "ic_github",
-        "ic_git",
+        "ic_npm",
+        "ic_prettier",
+        "ic_sass",
     ];
 
     return (
@@ -66,16 +58,7 @@ export const AboutPage: React.FC = () => {
                             <li key={el}>{el}</li>
                         ))}
                     </ul>
-                    <div className={css.icons}>
-                        {iconsRight.map((el) => (
-                            <span
-                                key={el}
-                                className={css[`${el}`] + " " + css.icon}
-                            ></span>
-                        ))}
-                    </div>
                 </div>
-
                 <div className={css.text}>{language.englishContent}</div>
             </div>
         </div>

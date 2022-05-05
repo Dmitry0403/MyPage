@@ -1,8 +1,5 @@
 .aboutPage {
     display: flex;
-    background-color: #f8cf84;
-    padding: 20px;
-    font-weight: 500;
 }
 
 .sideContainer {
@@ -25,7 +22,6 @@
 }
 
 .content {
-    line-height: 1.5;
     max-width: 75%;
 }
 

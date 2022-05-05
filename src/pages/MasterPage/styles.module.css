@@ -17,4 +17,8 @@
 .subContainerChildren {
     height: 100%;
     overflow: auto;
+    background-color: #f8cf84;
+    padding: 20px;
+    font-weight: 500;
+    line-height: 1.5;
 }
