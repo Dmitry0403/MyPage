@@ -12,7 +12,7 @@ export const language = {
         experience: "Опыт работы",
         internship: "31.01 - 24.03.2022: стажировка SolbegSoft",
         courses:
-            "22.04 – 22.12.2021: courses «TeachMeSkills» Front-end Developer",
+            "22.04 – 22.12.2021: курсы «TeachMeSkills» Front-end Developer",
         current: "2005 – по настоящее время: ООО «Аэростар»",
         past: "1999 – 2005: СП «Белкарго»",
         review: "отзыв SolbegSoft",
@@ -43,7 +43,7 @@ export const language = {
         experience: "Work experience",
         internship: "31.01 - 24.03.2022: SolbegSoft internship",
         courses:
-            "22.04 – 22.12.2021: курсы «TeachMeSkills» Front-end Developer",
+            "22.04 – 22.12.2021: courses «TeachMeSkills» Front-end Developer",
         current: "2005 – until now: Aerostar LLC",
         past: "1999 – 2005: JV Belkargo",
         review: "review SolbegSoft",
