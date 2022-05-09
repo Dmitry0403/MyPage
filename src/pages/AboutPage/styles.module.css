@@ -1,19 +1,13 @@
-.aboutPage {
+.section {
     display: flex;
+    height: 100%;
 }
 
-.sideContainer {
+.leftSideContainer {
     margin-right: 20px;
 }
 
-.icons {
-    display: flex;
-    flex-wrap: wrap;
-}
-
 .foto {
-    width: 100%;
-    max-height: 600px;
     overflow: hidden;
 }
 
@@ -21,20 +15,45 @@
     width: 100%;
 }
 
-.content {
-    max-width: 75%;
+.name {
+    font-weight: 600;
+}
+
+.objective {
+    font-size: 20px;
+}
+
+.rightSideContainer {
+    max-width: 78%;
+    height: 100%;
+    overflow: auto;
+}
+
+.icons {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.icon {
+    padding: 10px;
+}
+
+.iconPadding30 {
+    padding: 30px;
 }
 
 .title {
-    background-color: orange;
+    background-color: rgb(255, 165, 0);
     padding: 5px 25px;
+    margin-right: 10px;
     font-size: 25px;
     font-weight: 600;
     text-align: center;
 }
 
 .text {
-    padding: 10px 0 10px 0;
+    padding: 10px 10px 10px 0;
+    text-align: justify;
 }
 
 .listContainer {
@@ -44,10 +63,6 @@
 .list {
     margin: 0;
     min-width: 50%;
-}
-
-.icon {
-    padding: 20px;
 }
 
 .ic_bem:before {
@@ -120,13 +135,24 @@
 }
 
 @media screen and (max-width: 767px) {
-    .aboutPage {
-        display: block;
+    .section {
+        flex-direction: column;
+        overflow: auto;
     }
-    .content {
+    .rightSideContainer {
         max-width: 100%;
+        overflow: unset;
+    }
+    .leftSideContainer {
+        margin: 0 0 10px 0;
     }
     .list {
         width: 100%;
+    }
+    .title {
+        margin: 0;
+    }
+    .text {
+        padding-right: 0;
     }
 }

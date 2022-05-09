@@ -1,13 +1,13 @@
 import React from "react";
 import css from "./styles.module.css";
-import foto from "../../img/avatar2.jpg";
 import { useLanguage } from "../../context";
+import foto from "../../img/avatar2.jpg";
 
 export const AboutPage: React.FC = () => {
     const { languageTheme: language } = useLanguage();
 
     const skills = [
-        "HTML 5",
+        `HTML 5`,
         "CSS / SASS",
         "JavaScript",
         "TypeScript",
@@ -24,30 +24,27 @@ export const AboutPage: React.FC = () => {
         "ic_react",
         "ic_redux",
         "ic_javascript",
-        "ic_css3",
         "ic_html5",
+        "ic_css3",
         "ic_github",
         "ic_npm",
         "ic_prettier",
+        "ic_git",
         "ic_sass",
+        "ic_antdesign",
+        "ic_bem",
     ];
 
     return (
-        <div className={css.aboutPage}>
-            <div className={css.sideContainer}>
+        <div className={css.section}>
+            <div className={css.leftSideContainer}>
                 <div className={css.foto}>
                     <img src={foto} alt="foto" />
                 </div>
-                <div className={css.icons}>
-                    {iconsLeft.map((el) => (
-                        <span
-                            key={el}
-                            className={css[`${el}`] + " " + css.icon}
-                        ></span>
-                    ))}
-                </div>
+                <div className={css.name}>{language.name}</div>
+                <div className={css.objective}>{language.objectiveContent}</div>
             </div>
-            <div className={css.content}>
+            <div className={css.rightSideContainer}>
                 <div className={css.title}>{language.about}</div>
                 <div className={css.text}>{language.aboutContent}</div>
                 <div className={css.title}>{language.skills}</div>
@@ -58,6 +55,23 @@ export const AboutPage: React.FC = () => {
                             <li key={el}>{el}</li>
                         ))}
                     </ul>
+                    <div className={css.icons}>
+                        {iconsLeft.map((el, index) =>
+                            index % 2 === 0 ? (
+                                <span
+                                    key={el}
+                                    className={css[`${el}`] + " " + css.icon}
+                                ></span>
+                            ) : (
+                                <span
+                                    key={el}
+                                    className={
+                                        css[`${el}`] + " " + css.iconPadding30
+                                    }
+                                ></span>
+                            )
+                        )}
+                    </div>
                 </div>
                 <div className={css.text}>{language.englishContent}</div>
             </div>

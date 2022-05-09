@@ -10,6 +10,7 @@ export const language = {
         objective: "Позиция",
         education: "Образование",
         experience: "Опыт работы",
+        name: "Дмитрий Косенко",
         internship: "31.01 - 24.03.2022: стажировка SolbegSoft",
         courses:
             "22.04 – 22.12.2021: курсы «TeachMeSkills» Front-end Developer",
@@ -41,6 +42,7 @@ export const language = {
         objective: "Objective",
         education: "Education",
         experience: "Work experience",
+        name: "Dmitry Kosenko",
         internship: "31.01 - 24.03.2022: SolbegSoft internship",
         courses:
             "22.04 – 22.12.2021: courses «TeachMeSkills» Front-end Developer",
