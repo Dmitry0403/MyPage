@@ -7,7 +7,7 @@ import css from "./styles.module.css";
 export const Header: React.FC = () => {
     const { languageTheme, setLanguageTheme, language } = useLanguage();
 
-    const links = ["about", "summary", "contact", "portfolio"];
+    const links = ["about", "summary", "portfolio", "contact"];
 
     const [isActiveMenu, setIsActiveMenu] = useState(false);
 

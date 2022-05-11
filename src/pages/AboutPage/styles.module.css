@@ -13,6 +13,8 @@
 
 .foto img {
     width: 100%;
+    border: rgb(255, 165, 0) solid 3px;
+    box-shadow: 0px 5px 5px 0px rgb(255, 165, 0);
 }
 
 .name {
@@ -44,9 +46,10 @@
 
 .title {
     background-color: rgb(255, 165, 0);
+    border-radius: 5px;
     padding: 5px 25px;
     margin-right: 10px;
-    font-size: 25px;
+    font-size: 28px;
     font-weight: 600;
     text-align: center;
 }

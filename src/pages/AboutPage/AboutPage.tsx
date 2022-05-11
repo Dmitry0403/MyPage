@@ -28,9 +28,9 @@ export const AboutPage: React.FC = () => {
         "ic_css3",
         "ic_github",
         "ic_npm",
-        "ic_prettier",
-        "ic_git",
         "ic_sass",
+        "ic_git",
+        "ic_prettier",
         "ic_antdesign",
         "ic_bem",
     ];
