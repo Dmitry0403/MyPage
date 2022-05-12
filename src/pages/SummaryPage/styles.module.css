@@ -36,7 +36,7 @@
 
 .date::before {
     position: absolute;
-    top: 50%;
+    top: 45%;
     left: 100%;
     transform: translateX(24px);
     content: "";
@@ -58,7 +58,7 @@
     text-align: justify;
 }
 
-.certificate {
+/* .certificate {
     max-width: 30%;
     overflow: hidden;
     transition: transform 0.3s ease;
@@ -70,7 +70,7 @@
 
 .review {
     color: black;
-}
+} */
 
 @media screen and (max-width: 767px) {
     .section {
