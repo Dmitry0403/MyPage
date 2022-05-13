@@ -1,6 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
 import css from "./styles.module.css";
-
 import axitImg from "../../img/AXIT.png";
 import promotionImg from "../../img/promotion.png";
 import capedImg from "../../img/caped.png";
@@ -61,31 +60,25 @@ const dataJsProject = [
     },
 ];
 
-const dataReactTrelloProject = [
+const dataReactProject = [
     {
         linkPage: " https://dmitry0403.github.io/Trello-React-release/",
         linkGitHub: "https://github.com/Dmitry0403/REACT-Trello",
         screenshot: trelloReactImg,
     },
-];
 
-const dataWeatherProject = [
     {
         linkPage: " https://dmitry0403.github.io/weather-release/",
         linkGitHub: "https://github.com/Dmitry0403/Weather-App",
         screenshot: weatherImg,
     },
-];
 
-const dataTodoProject = [
     {
         linkPage: "https://dmitry0403.github.io/todo-redux-release/",
         linkGitHub: "https://github.com/Dmitry0403/todo-redux",
         screenshot: todoImg,
     },
-];
 
-const dataCommerceProject = [
     {
         linkPage: " https://dmitry0403.github.io/commerce-release/",
         linkGitHub: "https://github.com/Dmitry0403/commerce-app",
@@ -96,9 +89,13 @@ const dataCommerceProject = [
 export const PortfolioPage = () => {
     const { languageTheme: language } = useLanguage();
 
+    const [activeButton, setActiveButton] = useState(language.all);
+
+    const buttons = ["All", "HTML&CSS", "JS", "ReactJS"];
+
     const cards = (data: IDataProjects[]) => {
         return data.map((item) => (
-            <div className={css.card}>
+            <div className={css.card} key={item.linkPage}>
                 <a href={item.linkPage} title="перейти на страницу">
                     <div className={css.cardImg}>
                         <img src={item.screenshot} alt="screenshot" />
@@ -111,7 +108,32 @@ export const PortfolioPage = () => {
         ));
     };
 
-    const buttons = [language.all, "HTML&CSS", "JS", "ReactJS"];
+    const getStyleButton = (buttonName: string) => {
+        return buttonName === activeButton
+            ? css.activeItemButton
+            : css.itemButton;
+    };
+
+    const handleClickButton = (buttonName: string) => {
+        setActiveButton(buttonName);
+    };
+
+    const getDataProjects = () => {
+        switch (activeButton) {
+            case "HTML&CSS":
+                return dataHtmlProjects;
+            case "JS":
+                return dataJsProject;
+            case "ReactJS":
+                return dataReactProject;
+            default:
+                return [
+                    ...dataHtmlProjects,
+                    ...dataJsProject,
+                    ...dataReactProject,
+                ];
+        }
+    };
 
     return (
         <div className={css.section}>
@@ -119,52 +141,17 @@ export const PortfolioPage = () => {
                 <div className={css.title}>{language.portfolio}</div>
                 <div className={css.buttons}>
                     {buttons.map((el) => (
-                        <div className={css.itemButton}>{el}</div>
+                        <div
+                            className={getStyleButton(el)}
+                            onClick={() => handleClickButton(el)}
+                            key={el}
+                        >
+                            {el}
+                        </div>
                     ))}
                 </div>
             </div>
-            <div className={css.portfolio}>
-                <div className={css.portfolioCards}>
-                    <div className={css.portfolioTitle}>HTML&CSS</div>
-                    <div className={css.cardsHtml}>
-                        {cards(dataHtmlProjects)}
-                    </div>
-                </div>
-                <div className={css.portfolioCards}>
-                    <div className={css.portfolioTitle}>Trello JS</div>
-                    <div className={css.cardsTrelloJs}>
-                        {cards(dataJsProject)}
-                    </div>
-                </div>
-                <div className={css.portfolioProjects}>
-                    <div className={css.portfolioCards}>
-                        <div className={css.portfolioTitle}>Trello React</div>
-                        <div className={css.cardsTrelloReact}>
-                            {cards(dataReactTrelloProject)}
-                        </div>
-                    </div>
-                    <div className={css.portfolioCards}>
-                        <div className={css.portfolioTitle}>Weather React</div>
-                        <div className={css.cardsWeather}>
-                            {cards(dataWeatherProject)}
-                        </div>
-                    </div>
-                </div>
-                <div className={css.portfolioProjects}>
-                    <div className={css.portfolioCards}>
-                        <div className={css.portfolioTitle}>ToDo Redux</div>
-                        <div className={css.cardsTodo}>
-                            {cards(dataTodoProject)}
-                        </div>
-                    </div>
-                    <div className={css.portfolioCards}>
-                        <div className={css.portfolioTitle}>Commerce Redux</div>
-                        <div className={css.cardsCommerce}>
-                            {cards(dataCommerceProject)}
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <div className={css.portfolio}>{cards(getDataProjects())}</div>
         </div>
     );
 };

@@ -1,14 +1,14 @@
 .section {
     height: 100%;
-    overflow: auto;
-    padding: 0px 20px 0 10px;
+    overflow-y: scroll;
+    padding-right: 20px;
 }
 
 .headerSection {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 30px;
+    margin-bottom: 60px;
 }
 
 .title {
@@ -27,28 +27,43 @@
 }
 
 .itemButton {
-    border: 2px solid rgb(255, 165, 0);
-    box-shadow: 1px 1px 4px rgb(255 165 0 / 40%);
+    border: 1px solid rgb(255, 165, 0);
+    box-shadow: 1px 1px 10px rgb(255 165 0);
     border-radius: 5px;
     padding: 5px;
-    margin-right: 10px;
+    margin: 5px;
+    transition: box-shadow 0.3s ease;
+}
+
+.activeItemButton {
+    border: 1px solid rgb(255, 165, 0);
+    background: rgb(255, 165, 0, 0.4);
+    box-shadow: 1px 1px 10px rgb(255 165 0);
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px;
+    transition: box-shadow 0.3s ease;
+}
+
+.itemButton:hover {
+    cursor: pointer;
+    box-shadow: 5px 5px 5px rgb(255 165 0);
+}
+
+.activeItemButton:hover {
+    cursor: pointer;
+    box-shadow: 5px 5px 5px rgb(255 165 0);
 }
 
 .itemButton:last-child {
     margin-right: 0;
 }
 
-.portfolioCards {
-    margin-bottom: 20px;
+.activeItemButton:last-child {
+    margin-right: 0;
 }
 
-.portfolioTitle {
-    padding: 10px;
-    font-size: 30px;
-    font-style: italic;
-}
-
-.cardsHtml {
+.portfolio {
     display: flex;
     flex-wrap: wrap;
 }
@@ -99,7 +114,18 @@
     text-decoration: underline;
 }
 
-.portfolioProjects {
-    display: flex;
-    justify-content: space-around;
+@media screen and (max-width: 767px) {
+    .section {
+        padding: 0;
+    }
+    .headerSection {
+        display: block;
+    }
+    .title {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .buttons {
+        flex-wrap: wrap;
+    }
 }
