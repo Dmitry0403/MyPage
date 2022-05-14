@@ -13,42 +13,48 @@ import commerceImg from "../../img/commerce.png";
 import todoImg from "../../img/todo.png";
 import { useLanguage } from "../../context";
 
-interface IDataProjects {
-    linkPage: string;
-    linkGitHub: string;
-    screenshot: any;
-}
-
 const dataHtmlProjects = [
     {
         linkPage: "https://dmitry0403.github.io/AXIT-release/",
         linkGitHub: "https://github.com/Dmitry0403/AXIT-project",
         screenshot: axitImg,
+        title: "Website layout",
+        subTitle: "HTML&CSS",
     },
     {
         linkPage: "https://dmitry0403.github.io/promotion-release/",
         linkGitHub: "https://github.com/Dmitry0403/Promotion-project",
         screenshot: promotionImg,
+        title: "Website layout",
+        subTitle: "HTML&CSS",
     },
     {
         linkPage: " https://dmitry0403.github.io/caped-release/",
         linkGitHub: "https://github.com/Dmitry0403/Caped-project",
         screenshot: capedImg,
+        title: "Website layout",
+        subTitle: "HTML&CSS",
     },
     {
         linkPage: "https://dmitry0403.github.io/article-release/",
         linkGitHub: "https://github.com/Dmitry0403/Grid-project",
         screenshot: articleImg,
+        title: "Website layout",
+        subTitle: "HTML&CSS",
     },
     {
         linkPage: "https://dmitry0403.github.io/coffee-release/",
         linkGitHub: "https://github.com/Dmitry0403/Coffee-project",
         screenshot: coffeeImg,
+        title: "Website layout",
+        subTitle: "HTML&CSS",
     },
     {
         linkPage: "https://dmitry0403.github.io/flower-release/",
         linkGitHub: "https://github.com/Dmitry0403/Flower-project",
         screenshot: flowerImg,
+        title: "Website layout",
+        subTitle: "HTML&CSS",
     },
 ];
 
@@ -57,6 +63,8 @@ const dataJsProject = [
         linkPage: "https://dmitry0403.github.io/coolSoft/",
         linkGitHub: "https://github.com/Dmitry0403/CoolSoftDevelopment",
         screenshot: trelloJsImg,
+        title: "Project Trello",
+        subTitle: "JavaScript",
     },
 ];
 
@@ -65,48 +73,41 @@ const dataReactProject = [
         linkPage: " https://dmitry0403.github.io/Trello-React-release/",
         linkGitHub: "https://github.com/Dmitry0403/REACT-Trello",
         screenshot: trelloReactImg,
+        title: "Project Trello",
+        subTitle: "ReactJS",
     },
 
     {
         linkPage: " https://dmitry0403.github.io/weather-release/",
         linkGitHub: "https://github.com/Dmitry0403/Weather-App",
         screenshot: weatherImg,
+        title: "Project Weather",
+        subTitle: "ReactJS",
     },
 
     {
         linkPage: "https://dmitry0403.github.io/todo-redux-release/",
         linkGitHub: "https://github.com/Dmitry0403/todo-redux",
         screenshot: todoImg,
+        title: "Project ToDo",
+        subTitle: "ReactTS Redux",
     },
 
     {
         linkPage: " https://dmitry0403.github.io/commerce-release/",
         linkGitHub: "https://github.com/Dmitry0403/commerce-app",
         screenshot: commerceImg,
+        title: "e-commerce",
+        subTitle: "ReactTS Redux",
     },
 ];
 
-export const PortfolioPage = () => {
+export const PortfolioPage: React.FC = () => {
     const { languageTheme: language } = useLanguage();
 
-    const [activeButton, setActiveButton] = useState(language.all);
+    const [activeButton, setActiveButton] = useState("All");
 
-    const buttons = ["All", "HTML&CSS", "JS", "ReactJS"];
-
-    const cards = (data: IDataProjects[]) => {
-        return data.map((item) => (
-            <div className={css.card} key={item.linkPage}>
-                <a href={item.linkPage} title="перейти на страницу">
-                    <div className={css.cardImg}>
-                        <img src={item.screenshot} alt="screenshot" />
-                    </div>
-                </a>
-                <div className={css.cardLink}>
-                    <a href={item.linkGitHub}>GitHub</a>
-                </div>
-            </div>
-        ));
-    };
+    const buttons = ["All", "HTML&CSS", "JS", "React"];
 
     const getStyleButton = (buttonName: string) => {
         return buttonName === activeButton
@@ -151,7 +152,28 @@ export const PortfolioPage = () => {
                     ))}
                 </div>
             </div>
-            <div className={css.portfolio}>{cards(getDataProjects())}</div>
+            <div className={css.portfolio}>
+                {getDataProjects().map((item) => (
+                    <div className={css.card} key={item.linkPage}>
+                        <a href={item.linkPage}>
+                            <div className={css.cardImg}>
+                                <div className={css.coverCard}>
+                                    <div className={css.coverCardTitle}>
+                                        {item.title}
+                                    </div>
+                                    <div className={css.coverCardSubTitle}>
+                                        {item.subTitle}
+                                    </div>
+                                </div>
+                                <img src={item.screenshot} alt="screenshot" />
+                            </div>
+                        </a>
+                        <div className={css.cardLink}>
+                            <a href={item.linkGitHub}>GitHub</a>
+                        </div>
+                    </div>
+                ))}
+            </div>
         </div>
     );
 };
