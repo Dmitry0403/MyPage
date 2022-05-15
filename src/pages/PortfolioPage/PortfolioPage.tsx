@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import css from "./styles.module.css";
 import axitImg from "../../img/AXIT.png";
 import promotionImg from "../../img/promotion.png";
@@ -102,6 +102,12 @@ const dataReactProject = [
     },
 ];
 
+const dataAllProjects = [
+    ...dataHtmlProjects,
+    ...dataJsProject,
+    ...dataReactProject,
+];
+
 export const PortfolioPage: React.FC = () => {
     const { languageTheme: language } = useLanguage();
 
@@ -125,14 +131,10 @@ export const PortfolioPage: React.FC = () => {
                 return dataHtmlProjects;
             case "JS":
                 return dataJsProject;
-            case "ReactJS":
+            case "React":
                 return dataReactProject;
             default:
-                return [
-                    ...dataHtmlProjects,
-                    ...dataJsProject,
-                    ...dataReactProject,
-                ];
+                return dataAllProjects;
         }
     };
 
