@@ -12,6 +12,8 @@ export const language = {
         experience: "Опыт",
         all: "Все",
         name: "Дмитрий Косенко",
+        seeCerificate: "посмотреть сертификат",
+        seeReview: "посмотеть отзыв",
         internshipTitle: "Стажировка SolbegSoft",
         internshipDate: "январь - апрель 2022",
         internshipText:
@@ -50,6 +52,8 @@ export const language = {
         experience: "Experience",
         all: "All",
         name: "Dmitry Kosenko",
+        seeCerificate: "see certificate",
+        seeReview: "see review",
         internshipTitle: "SolbegSoft internship",
         internshipDate: "January - April 2022",
         internshipText:

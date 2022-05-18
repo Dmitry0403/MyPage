@@ -138,15 +138,11 @@
     .closeMenuIcon::before,
     .closeMenuIcon::after {
         position: absolute;
+        content: "";
         left: 0;
         height: 10%;
         width: 100%;
         background-color: rgb(255, 255, 255);
-    }
-
-    .closeMenuIcon::before,
-    .closeMenuIcon::after {
-        content: "";
     }
 
     .closeMenuIcon::before {

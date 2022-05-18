@@ -58,19 +58,17 @@
     text-align: justify;
 }
 
-/* .certificate {
-    max-width: 30%;
-    overflow: hidden;
-    transition: transform 0.3s ease;
+.image {
+    display: inline-block;
+    cursor: pointer;
+    font-weight: 600;
+    font-style: italic;
+    transition: transform 0.35s ease;
 }
 
-.certificate img {
-    width: 100%;
+.image:hover {
+    transform: translateX(10px);
 }
-
-.review {
-    color: black;
-} */
 
 @media screen and (max-width: 767px) {
     .section {
