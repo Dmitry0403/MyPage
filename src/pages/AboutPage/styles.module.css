@@ -1,0 +1,161 @@
+.section {
+    display: flex;
+    height: 100%;
+}
+
+.leftSideContainer {
+    margin-right: 20px;
+}
+
+.foto {
+    overflow: hidden;
+}
+
+.foto img {
+    width: 100%;
+    border: rgb(255, 165, 0) solid 3px;
+    box-shadow: 0px 5px 5px 0px rgb(255, 165, 0);
+}
+
+.name {
+    font-weight: 600;
+}
+
+.objective {
+    font-size: 20px;
+}
+
+.rightSideContainer {
+    max-width: 78%;
+    height: 100%;
+    overflow: auto;
+}
+
+.icons {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.icon {
+    padding: 10px;
+}
+
+.iconPadding30 {
+    padding: 30px;
+}
+
+.title {
+    background-color: rgb(255, 165, 0);
+    border-radius: 5px;
+    padding: 5px 25px;
+    margin-right: 10px;
+    font-size: 28px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.text {
+    padding: 10px 10px 10px 0;
+    text-align: justify;
+}
+
+.listContainer {
+    display: flex;
+}
+
+.list {
+    margin: 0;
+    min-width: 50%;
+}
+
+.ic_bem:before {
+    content: "\e902";
+    color: #000000;
+}
+.ic_npm:before {
+    content: "\e903";
+    color: #cb3837;
+}
+.ic_antdesign:before {
+    content: "\e904";
+    color: #0170fe;
+}
+.ic_prettier:before {
+    content: "\e907";
+    color: #fdb11a;
+}
+.ic_eslint:before {
+    content: "\e90f";
+    color: #4b32c3;
+}
+.ic_cssmodules:before {
+    content: "\e910";
+    color: #000000;
+}
+.ic_sass:before {
+    content: "\e900";
+    color: #cc6699;
+}
+.ic_github:before {
+    content: "\e901";
+    color: #181717;
+}
+.ic_git:before {
+    content: "\e905";
+    color: #f05032;
+}
+.ic_webpack:before {
+    content: "\e906";
+    color: #8dd6f9;
+}
+.ic_redux:before {
+    content: "\e908";
+    color: #764abc;
+}
+.ic_reactrouter:before {
+    content: "\e909";
+    color: #ca4245;
+}
+.ic_react:before {
+    content: "\e90a";
+    color: #61dafb;
+}
+.ic_typescript:before {
+    content: "\e90b";
+    color: #3178c6;
+}
+.ic_javascript:before {
+    content: "\e90c";
+    color: #fac002;
+}
+.ic_css3:before {
+    content: "\e90d";
+    color: #1572b6;
+}
+.ic_html5:before {
+    content: "\e90e";
+    color: #e34f26;
+}
+
+@media screen and (max-width: 767px) {
+    .section {
+        flex-direction: column;
+        overflow: auto;
+    }
+    .rightSideContainer {
+        max-width: 100%;
+        overflow: unset;
+    }
+    .leftSideContainer {
+        margin: 0 0 10px 0;
+    }
+    .list {
+        width: 100%;
+    }
+    .title {
+        margin: 0;
+    }
+    .text {
+        padding-right: 0;
+    }
+}

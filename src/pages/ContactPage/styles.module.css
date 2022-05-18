@@ -1,0 +1,112 @@
+.section {
+    height: 100%;
+    overflow-y: scroll;
+    padding-right: 20px;
+}
+
+.headerSection {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.title {
+    padding: 5px 25px;
+    font-size: 28px;
+    font-weight: 600;
+    text-align: left;
+    background-color: rgb(255, 165, 0);
+    border-radius: 5px;
+    width: 60%;
+}
+
+.contacts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.box {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    border: 1px solid rgb(255, 165, 0);
+    box-shadow: 5px 5px 10px rgb(255, 165, 0);
+    border-radius: 10px;
+    margin: 20px;
+    width: 40%;
+}
+
+.boxTitle {
+    font-weight: 600;
+}
+
+.boxContent {
+    font-size: 20px;
+}
+
+.boxContent a {
+    cursor: pointer;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+.boxContent a:hover {
+    text-decoration: underline;
+}
+
+.name {
+    font-weight: 600;
+}
+
+.objective {
+    font-size: 20px;
+}
+
+.icon {
+    margin-right: 20px;
+}
+
+.ic_github:before {
+    content: "\e901";
+    color: #181717;
+}
+
+.ic_whatsapp:before {
+    content: "\e911";
+    color: #25d366;
+}
+.ic_telegram:before {
+    content: "\e912";
+    color: #26a5e4;
+}
+.ic_viber:before {
+    content: "\e913";
+    color: #7360f2;
+}
+.ic_linkedin:before {
+    content: "\e914";
+    color: #0a66c2;
+}
+.ic_gmail:before {
+    content: "\e915";
+    color: #ea4335;
+}
+
+@media screen and (max-width: 767px) {
+    .section {
+        padding: 0;
+    }
+    .title {
+        width: 100%;
+    }
+    .box {
+        width: 100%;
+        margin: 10px 0px 10px 0px;
+        padding: 10px 0px 10px 5px;
+    }
+    .icon {
+        display: none;
+    }
+}
