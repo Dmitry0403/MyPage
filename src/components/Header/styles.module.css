@@ -58,10 +58,10 @@
 
 @media screen and (max-width: 767px) {
     .menuBody {
-        position: fixed;
-        top: 50px;
+        position: absolute;
+        top: 80px;
         left: 0;
-        height: 100%;
+        height: calc(100% + 30vh - 80px);
         width: 100%;
         z-index: 10;
         padding-top: 60px;
