@@ -35,7 +35,7 @@
     box-shadow: 5px 5px 10px rgb(255, 165, 0);
     border-radius: 10px;
     margin: 20px;
-    width: 40%;
+    min-width: 40%;
 }
 
 .boxTitle {
@@ -96,13 +96,13 @@
 
 @media screen and (max-width: 767px) {
     .section {
-        padding: 0;
+        padding-right: 10px;
     }
     .title {
         width: 100%;
     }
     .box {
-        width: 100%;
+        min-width: 100%;
         margin: 10px 0px 10px 0px;
         padding: 10px 0px 10px 5px;
     }

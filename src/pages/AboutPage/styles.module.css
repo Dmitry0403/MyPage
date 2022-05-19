@@ -19,10 +19,11 @@
 
 .name {
     font-weight: 600;
+    font-size: 2vw;
 }
 
 .objective {
-    font-size: 20px;
+    font-size: 1.5vw;
 }
 
 .rightSideContainer {
@@ -38,10 +39,12 @@
 
 .icon {
     padding: 10px;
+    font-size: 4vw;
 }
 
 .iconPadding30 {
     padding: 30px;
+    font-size: 4vw;
 }
 
 .title {
@@ -65,7 +68,7 @@
 
 .list {
     margin: 0;
-    min-width: 50%;
+    min-width: 40%;
 }
 
 .ic_bem:before {
@@ -141,6 +144,7 @@
     .section {
         flex-direction: column;
         overflow: auto;
+        padding-right: 10px;
     }
     .rightSideContainer {
         max-width: 100%;
@@ -157,5 +161,11 @@
     }
     .text {
         padding-right: 0;
+    }
+    .name {
+        font-size: 25px;
+    }
+    .objective {
+        font-size: 20px;
     }
 }
